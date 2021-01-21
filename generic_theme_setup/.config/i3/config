@@ -57,6 +57,7 @@ bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
+bindsym --release $mod+Shift+S  exec --no-startup-id notify-send "Select window to make opaque" && compton-trans -s 100
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
@@ -218,6 +219,7 @@ for_window [class="Viewnior"] floating enable border normal
 for_window [class="Steam"] floating enable border normal
 for_window [class="Guitarix"] floating enable border normal
 for_window [class="QjackCtl"] floating enable border normal
+for_window [class="Cisco AnyConnect Secure Mobility Client"] floating enable border normal
 # Open specific application in stacking mode
 for_window [class="RoboScope"] layout stacking border normal
 for_window [class="Sublime_text"] layout stacking border normal
@@ -323,7 +325,7 @@ bar {
         -p  nic.exclude=enx8cec4b30ac5a,lo,docker0,ens4u1u2,eth0  nic.format="{intf} {ssid} " \
             pasink.limit=100% pasource.limit=100% \
             datetime.format="%a %d %b %Y | %H:%M" \
-            interval=0.1 \
+            interval=0.8 \
         -t  custom-theme-powerline
 } 
 bar {
@@ -338,11 +340,10 @@ bar {
         }
 
         status_command bumblebee-status \
-        -m  traffic spacer cpu2 memory nvidiagpu spacer disk pacman \
+        -m  spacer traffic spacer cpu2 memory disk spacer spacer pacman \
         -p  traffic.format="{:.0f}" \
             memory.format="{used}/{total} ({percent:.0f}%)" \
             cpu2.colored="1" cpu2.temp_pattern="temp1_input" cpu2.layout="cpu2.cpuload cpu2.coresload cpu2.temp" \
-            nvidiagpu.format="GPU: {mem_used}/{mem_total} MiB  {temp}°C " \
             disk.format="{used}/{size} ({percent:05.02f}%)" disk.open="pcmanfm" \
             pacman.sum="true" \
             interval=1 \
