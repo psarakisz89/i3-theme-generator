@@ -314,10 +314,10 @@ bar {
         colors {
             background #00000000
             #                   border  backgr.   text
-            focused_workspace   #b2a468 #d6057785 #dfce82
-            active_workspace    #857b4e #7e034685 #dfce8295
-            inactive_workspace  #9c905b #58023165 #9c905b90
-            urgent_workspace    #ffffdd #d60577   #ffffdd
+            focused_workspace   #c4b86c #ff1eff85 #f6e788
+            active_workspace    #938a51 #a912a485 #f6e78895
+            inactive_workspace  #aca15f #760c7265 #aca15f90
+            urgent_workspace    #ffffe7 #ff1eff   #ffffe7
         }
 
         status_command bumblebee-status \
@@ -413,12 +413,12 @@ mode "$mode_gaps_outer" {
 }
 
 
-set $bg-color            #7e0346
-set $inactive-bg-color   #262626
-set $text-color          #dfce82
-set $inactive-text-color #b2a468
-set $urgent-bg-color     #ef0585
-set $indicator-color     #a3035b
+set $bg-color            #a912a4
+set $inactive-bg-color   #472270
+set $text-color          #f6e788
+set $inactive-text-color #c4b86c
+set $urgent-bg-color     #ff22ff
+set $indicator-color     #db17d5
 
 # window colors
 #                       border              background         text                  indicator
@@ -437,4 +437,4 @@ exec --no-startup-id i3-msg 'workspace $ws1; exec subl'
 exec --no-startup-id /home/psarakisz89/.config/i3/open_terminals.sh
 #open chromium in $ws3
 exec --no-startup-id i3-msg 'workspace $ws3; append_layout /home/psarakisz89/.config/i3/chromium.json'
-exec chromium
+exec edge

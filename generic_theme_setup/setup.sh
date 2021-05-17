@@ -7,8 +7,8 @@ DIR=$(pwd)
 echo "LINKING: $DIR/.config/i3/config-> ~/.config/i3/config "
 ln -nfs $DIR/.config/i3/config ~/.config/i3/config
 #i3 layouts
-echo "LINKING: $DIR/.config/i3/chromium.json-> ~/.config/i3/chromium.json "
-ln -nfs $DIR/.config/i3/chromium.json ~/.config/i3/chromium.json
+echo "LINKING: $DIR/.config/i3/browser.json-> ~/.config/i3/browser.json "
+ln -nfs $DIR/.config/i3/browser.json ~/.config/i3/browser.json
 echo "LINKING: $DIR/.config/i3/4terminals.json-> ~/.config/i3/4terminals.json "
 ln -nfs $DIR/.config/i3/4terminals.json ~/.config/i3/4terminals.json
 echo "LINKING: $DIR/.config/i3/open_terminals.sh-> ~/.config/i3/open_terminals.sh "
