@@ -435,6 +435,6 @@ bindsym $mod+bracketleft  exec "setxkbmap -model pc105 -layout us"
 exec --no-startup-id i3-msg 'workspace $ws1; exec subl'
 #open 4 terminals in $ws2
 exec --no-startup-id /home/psarakisz89/.config/i3/open_terminals.sh
-#open chromium in $ws3
-exec --no-startup-id i3-msg 'workspace $ws3; append_layout /home/psarakisz89/.config/i3/chromium.json'
-exec edge
+#open browser in $ws3
+exec --no-startup-id i3-msg 'workspace $ws3; append_layout /home/psarakisz89/.config/i3/browser.json' 
+exec microsoft-edge-dev 

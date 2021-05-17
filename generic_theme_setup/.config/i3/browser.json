@@ -3,20 +3,20 @@
     "current_border_width": 4,
     "floating": "auto_off",
     "geometry": {
-       "height": 1002,
-       "width": 937,
-       "x": 3854,
-       "y": 39
+       "height": 1026,
+       "width": 1920,
+       "x": 1920,
+       "y": 27
     },
-    "name": "i3: Layout saving in i3 - Chromium",
+    "marks": [],
+    "name": "Microsoft Edge Dev",
     "percent": 1,
     "swallows": [
        {
-       "class": "^microsoft-edge-dev$",
-       "instance": "^chromium$",
-       "_window_role": "^browser$"
+            "class": "^Microsoft\\-edge\\-dev$",
+            "instance": "^microsoft\\-edge\\-dev$",
+            "window_role": "^browser$"
        }
     ],
     "type": "con"
 }
-
