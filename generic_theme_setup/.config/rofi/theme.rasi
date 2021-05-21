@@ -4,12 +4,12 @@
  * Copyright: Rasmus Steinke
  ******************************************************************************/
 * {
-    selected-normal-foreground:  rgba(71,34,112,100%);
-    foreground:                  rgba(246,231,136,100%);
-    alternate-normal-background: rgba(71,34,112,100%);
-    selected-normal-background:  rgba(246,231,136,100%);
-    normal-background:           rgba(169,18,164,100%);
-    background:                  rgba(169,18,164,100%);
+    selected-normal-foreground:  rgba(0,42,63,100%);
+    foreground:                  rgba(154,228,255,100%);
+    alternate-normal-background: rgba(0,42,63,100%);
+    selected-normal-background:  rgba(154,228,255,100%);
+    normal-background:           rgba(35,128,165,100%);
+    background:                  rgba(35,128,165,100%);
     normal-foreground:           @foreground;
     separatorcolor:              @foreground;
 

@@ -49,13 +49,13 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#ff20ff"
-    foreground = "#f6e788"
+    background = "#3fe6ff"
+    foreground = "#9ae4ff"
     timeout = 10
 
 [urgency_normal]
-    background = "#a912a4"
-    foreground = "#f6e788"
+    background = "#2380a5"
+    foreground = "#9ae4ff"
     timeout = 10
 
 [urgency_critical]

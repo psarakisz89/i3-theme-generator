@@ -314,10 +314,10 @@ bar {
         colors {
             background #00000000
             #                   border  backgr.   text
-            focused_workspace   #c4b86c #ff1eff85 #f6e788
-            active_workspace    #938a51 #a912a485 #f6e78895
-            inactive_workspace  #aca15f #760c7265 #aca15f90
-            urgent_workspace    #ffffe7 #ff1eff   #ffffe7
+            focused_workspace   #7bb6cc #3bd9ff85 #9ae4ff
+            active_workspace    #5c8899 #2380a585 #9ae4ff95
+            inactive_workspace  #6b9fb2 #18597365 #6b9fb290
+            urgent_workspace    #ffffff #3bd9ff   #ffffff
         }
 
         status_command bumblebee-status \
@@ -413,12 +413,12 @@ mode "$mode_gaps_outer" {
 }
 
 
-set $bg-color            #a912a4
-set $inactive-bg-color   #472270
-set $text-color          #f6e788
-set $inactive-text-color #c4b86c
-set $urgent-bg-color     #ff22ff
-set $indicator-color     #db17d5
+set $bg-color            #2380a5
+set $inactive-bg-color   #002a3f
+set $text-color          #9ae4ff
+set $inactive-text-color #7bb6cc
+set $urgent-bg-color     #42f3ff
+set $indicator-color     #2da6d6
 
 # window colors
 #                       border              background         text                  indicator
@@ -432,7 +432,9 @@ bindsym $mod+bracketleft  exec "setxkbmap -model pc105 -layout us"
 
 #restore workspaces
 #open sublime in #ws1
-exec --no-startup-id i3-msg 'workspace $ws1; exec subl'
+# exec --no-startup-id i3-msg 'workspace $ws1; exec subl'
+exec_always i3-msg 'workspace $ws1; exec kitty -d ~/.config/ -e ~/local/nvim/bin/nvim i3/config; exec kitty -d ~/.config/nvim/ -e ~/local/nvim/bin/nvim init.lua'
+# exec_always --no-startup-id i3-msg 'workspace $ws1; exec kitty -e  ~/local/nvim/bin/nvim ~/.config; exec kitty -e ~/local/nvim/bin/nvim /home/psarakisz89/.config/nvim/;'
 #open 4 terminals in $ws2
 exec --no-startup-id /home/psarakisz89/.config/i3/open_terminals.sh
 #open browser in $ws3
