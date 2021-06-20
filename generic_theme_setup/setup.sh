@@ -40,6 +40,15 @@ ln -nfs $DIR/.config/dunst/dunstrc ~/.config/dunst/dunstrc
 echo "LINKING: $DIR/.config/kitty/kitty.conf -> ~/.config/kitty/kitty.conf "
 ln -nfs $DIR/.config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
+#zshrc
+echo "LINKING: $DIR/.zshrc -> ~/.zshrc"
+ln -nfs $DIR/.zshrc ~/.zshrc
+
+#bashrc
+echo "LINKING: $DIR/.bashrc -> ~/.bashrc"
+ln -nfs $DIR/.bashrc ~/.bashrc
+
+
 #wallpaper
 echo "COPYING: $DIR/.config/wallpaper/spawn1.jpg-> ~/.config/wallpaper/theme_wallpaper.jpg "
 mkdir -p ~/.config/wallpaper && cp $DIR/.config/wallpaper/purple2.jpg ~/.config/wallpaper/theme_wallpaper.jpg
