@@ -431,10 +431,8 @@ bindsym $mod+bracketright exec "setxkbmap -model pc105 -layout gr"
 bindsym $mod+bracketleft  exec "setxkbmap -model pc105 -layout us"
 
 #restore workspaces
-#open sublime in #ws1
-# exec --no-startup-id i3-msg 'workspace $ws1; exec subl'
-exec_always i3-msg 'workspace $ws1; exec kitty -d ~/.config/ -e ~/local/nvim/bin/nvim i3/config; exec kitty -d ~/.config/nvim/ -e ~/local/nvim/bin/nvim init.lua'
-# exec_always --no-startup-id i3-msg 'workspace $ws1; exec kitty -e  ~/local/nvim/bin/nvim ~/.config; exec kitty -e ~/local/nvim/bin/nvim /home/psarakisz89/.config/nvim/;'
+#open nvim in #ws1
+exec --no-startup-id i3-msg 'workspace $ws1; exec kitty -d ~/.config/ -e ~/local/nvim/bin/nvim; exec kitty -d ~/.config/nvim/ -e ~/local/nvim/bin/nvim'
 #open 4 terminals in $ws2
 exec --no-startup-id /home/psarakisz89/.config/i3/open_terminals.sh
 #open browser in $ws3
