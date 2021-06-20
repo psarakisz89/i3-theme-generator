@@ -16,5 +16,7 @@ pulseaudio-control
 rofi
 tk
 ttf-font-awesome-4
-xrandr
+xorg-xrandr
 zsh
+powerline-fonts
+
