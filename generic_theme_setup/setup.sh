@@ -48,6 +48,25 @@ ln -nfs $DIR/.zshrc ~/.zshrc
 echo "LINKING: $DIR/.bashrc -> ~/.bashrc"
 ln -nfs $DIR/.bashrc ~/.bashrc
 
+#NVIM
+echo "LINKING: $DIR/.config/nvim/init.lua -> ~/.config/init.lua"
+ln -nfs $DIR/.config/nvim/init.lua ~/.config/nvim/init.lua
+
+#NVIM LUA FILES
+ln -nfs $DIR/.config/nvim/lua/compe-completion.lua ~/.config/nvim/lua/compe-completion.lua
+ln -nfs $DIR/.config/nvim/lua/custom_highlights.lua ~/.config/nvim/lua/custom_highlights.lua
+ln -nfs $DIR/.config/nvim/lua/file-icons.lua ~/.config/nvim/lua/file-icons.lua
+ln -nfs $DIR/.config/nvim/lua/gitsigns-nvim.lua ~/.config/nvim/lua/gitsigns-nvim.lua
+ln -nfs $DIR/.config/nvim/lua/mappings.lua ~/.config/nvim/lua/mappings.lua
+ln -nfs $DIR/.config/nvim/lua/misc-utils.lua ~/.config/nvim/lua/misc-utils.lua
+ln -nfs $DIR/.config/nvim/lua/nvim-lspconfig.lua ~/.config/nvim/lua/nvim-lspconfig.lua
+ln -nfs $DIR/.config/nvim/lua/nvimTree.lua ~/.config/nvim/lua/nvimTree.lua
+ln -nfs $DIR/.config/nvim/lua/pluginList.lua ~/.config/nvim/lua/pluginList.lua
+ln -nfs $DIR/.config/nvim/lua/statusline.lua ~/.config/nvim/lua/statusline.lua
+ln -nfs $DIR/.config/nvim/lua/telescope-nvim.lua ~/.config/nvim/lua/telescope-nvim.lua
+ln -nfs $DIR/.config/nvim/lua/top-bufferline.lua ~/.config/nvim/lua/top-bufferline.lua
+ln -nfs $DIR/.config/nvim/lua/treesitter-nvim.lua ~/.config/nvim/lua/treesitter-nvim.lua
+ln -nfs $DIR/.config/nvim/lua/whichkey.lua ~/.config/nvim/lua/whichkey.lua
 
 #wallpaper
 echo "COPYING: $DIR/.config/wallpaper/spawn1.jpg-> ~/.config/wallpaper/theme_wallpaper.jpg "
