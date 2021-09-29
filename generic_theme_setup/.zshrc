@@ -85,6 +85,7 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-z
+    fzf
 )
 
 source $ZSH/oh-my-zsh.sh
