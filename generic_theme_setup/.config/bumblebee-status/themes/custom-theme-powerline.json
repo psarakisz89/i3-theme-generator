@@ -15,12 +15,12 @@
     },
     "cycle": [
         {
-            "fg": "#ffe9bb",
-            "bg": "#00392c"
+            "fg": "#ffeda3",
+            "bg": "#4a081b"
         },
         {
-            "fg": "#ffe9bb",
-            "bg": "#3a3a3a"
+            "fg": "#ffeda3",
+            "bg": "#0f1212"
         }
     ],
     "dnf": {
