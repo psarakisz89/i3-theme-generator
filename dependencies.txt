@@ -5,7 +5,6 @@ bluez-utils
 bumblebee-status
 compton-tryone-git
 feh
-i3-gaps
 kitty
 libxrandr
 pavucontrol
@@ -19,6 +18,7 @@ ttf-font-awesome-4
 xorg-xrandr
 zsh
 powerline-fonts
+ttf-meslo-nerd-font-powerlevel10k 
 
 //Install oh my zsh
 curl -L http://install.ohmyz.sh | sh

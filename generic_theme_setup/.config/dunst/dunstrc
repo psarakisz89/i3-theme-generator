@@ -1,23 +1,23 @@
 [global]
     monitor = 0
-    follow = mouse
+    follow = none
     geometry = "320x5-15+15"
     indicate_hidden = yes
     shrink = no
-    transparency = 0
+    transparency = 20
     notification_height = 0
     separator_height = 2
     padding = 10
     horizontal_padding = 10
-    frame_width = 1
-    frame_color = "#232323"
+    frame_width = 3
+    frame_color = "#000000"
     separator_color = frame
     sort = yes
     idle_threshold = 120
-    font = Source Sans Pro 10
+    font = Source Sans Pro 12
     line_height = 0
     markup = full
-    format = "<span foreground='#C2C2A6'><b>%s %p</b></span>\n%b"
+    format = "<span foreground='#000000'><b>%s %p</b></span>\n%b"
     alignment = left
     vertical_alignment = center
     show_age_threshold = 60
@@ -28,8 +28,10 @@
     hide_duplicate_count = false
     show_indicators = yes
     icon_position = left
-    max_icon_size = 32
-    icon_path = /usr/share/icons/Paper/16x16/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/16x16/apps/
+    min_icon_size = 16
+    max_icon_size = 24
+    icon_theme = Adwaita
+    enable_recursive_icon_lookup = true
     sticky_history = yes
     history_length = 20
     always_run_script = true
@@ -49,17 +51,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#a7133d"
-    foreground = "#ffeda3"
+    background = "#5ac85a"
+    foreground = "#000000"
     timeout = 10
 
 [urgency_normal]
-    background = "#5d0b22"
-    foreground = "#ffeda3"
+    background = "#08f800"
+    foreground = "#000000"
     timeout = 10
 
 [urgency_critical]
     background = "#D62929"
     foreground = "#F9FAF9"
     timeout = 0
-    icon = /usr/share/icons/Paper/16x16/status/dialog-warning.png
+    default_icon = /usr/share/icons/Adwaita/32x32/status/dialog-warning-symbolic.symbolic.png
+

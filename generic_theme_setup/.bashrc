@@ -140,3 +140,4 @@ ex ()
 
 source ~/.docker_aliases
 source ~/.iRobot_aliases
+export USE_HOST_NETWORK=YES
