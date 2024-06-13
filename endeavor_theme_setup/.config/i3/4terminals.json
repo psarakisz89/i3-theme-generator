@@ -1,0 +1,102 @@
+// vim:ts=4:sw=4:et
+{
+    // splitv split container with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 4,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1032,
+               "width": 1920,
+               "x": 0,
+               "y": 0
+            },
+            "name": "psarakisz89@Blade15: ~",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^kitty$",
+               "instance": "^term1$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 4,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1032,
+               "width": 1920,
+               "x": 0,
+               "y": 0
+            },
+            "name": "psarakisz89@Blade15: ~",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^kitty$",
+               "instance": "^term2$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    // splitv split container with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 4,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1032,
+               "width": 1920,
+               "x": 0,
+               "y": 0
+            },
+            "name": "psarakisz89@Blade15: ~",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^kitty$",
+               "instance": "^term3$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 4,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1032,
+               "width": 1920,
+               "x": 0,
+               "y": 0
+            },
+            "name": "psarakisz89@Blade15: ~",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^kitty$",
+               "instance": "^term4$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
