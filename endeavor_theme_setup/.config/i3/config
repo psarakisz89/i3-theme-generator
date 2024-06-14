@@ -203,8 +203,8 @@ bindsym F1 exec --no-startup-id ~/.config/i3/scripts/keyhint-2
 #bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +10 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
 #bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -10 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
 # Backlight setting using dunst osc
-bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_up
-bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down
+bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/brightness.sh Up
+bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/brightness.sh Down
 
 # change focus
 bindsym $mod+j focus left
@@ -326,18 +326,15 @@ workspace $ws8 output DP-4-1 eDP-1
 workspace $ws9 output DP-3 eDP-1
 
 # bind program to workspace and focus to them on startup:
-# assign [class="Xfce4-terminal"] $ws1
-assign [class="(?i)firefox"] $ws3
-#assign [class="Thunar"] $ws3
+  assign [class="Sublime_text"] $ws1
+assign [class="(?i)Google-chrome"] $ws3
 assign [class="thunderbird"] $ws4
 assign [class="TelegramDesktop"] $ws5
 
+
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=Xfce4-terminal] focus
-for_window [class=(?i)firefox] focus
-for_window [class=Thunar] focus
-for_window [class=Thunderbird] focus
-for_window [class=TelegramDesktop] focus
+for_window [class=(?i)Google-chrome] focus
 
 ##############
 # compositor #
@@ -387,7 +384,7 @@ exec --no-startup-id dex --autostart --environment i3
 #exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 
 
 # num lock activated
-#exec --no-startup-id numlockx on
+exec --no-startup-id numlockx on
 
 # configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)
 #exec --no-startup-id setxkbmap -layout 'us,sk' -variant altgr-intl,qwerty -option 'grp:alt_caps_toggle'
@@ -401,14 +398,13 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
+exec --no-startup-id sleep 1 && feh --bg-fill /home/zpsarakis/Pictures/backgrounds/nv2.jpg
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
 
 # disable power saving (for example if using xscreensaver)
 #exec --no-startup-id xset -dpms
-
 
 # Lock the system
 # lock with a picture:
@@ -445,6 +441,10 @@ exec --no-startup-id /usr/bin/dunst
 #exec --no-startup-id sleep 2 && xfce4-terminal
 #exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && thunar
+exec --no-startup-id subl
+exec --no-startup-id google-chrome-stable 
+#exec --no-startup-id /home/zpsarakis/.config/i3/open_terminals.sh
+
 
 ###############
 # system tray #
@@ -478,7 +478,11 @@ for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
 for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
 for_window [class="Pamac-manager"] floating enable
 for_window [window_role="About"] floating enable
-for_window [class="thunar" class="Thunar"] floating enable border pixel 2
+for_window [class="org.gnome.Nautilus"] floating enable
+for_window [class="pavucontrol"] floating enable
+for_window [class="Manjaro Settings Manager"] floating enable
+for_window [class="pamac-manager"] floating enable
+
 
 # set stacking for some other apps
 for_window [class="Sublime_text"] layout stacking border normal 
@@ -488,7 +492,7 @@ for_window [class="urxvt"] border pixel 1
 
 # set size of floating window
 #for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog
-#for_window [class=".*"] resize set 640 480 #to change size of all floating windows 
+for_window [class=".*"] resize set 640 480 #to change size of all floating windows 
 
 # set position of floating window
 #for_window [class=".*"] move position center
@@ -541,10 +545,10 @@ strip_workspace_numbers no
 
             colors {
             separator          $purple
-            background         $darkgrey
+            background         $darkbluetrans
             statusline         $white
 #                               border              bg      txt     indicator
-        focused_workspace   $mediumgrey     $grey       $darkgrey   $purple
+        focused_workspace   $mediumgrey         $grey       $darkgrey   $purple
         active_workspace    $lightblue          $mediumgrey $darkgrey   $purple
         inactive_workspace  $darkgrey           $darkgrey   $grey       $purple
         urgent_workspace    $urgentred          $urgentred  $white      $purple

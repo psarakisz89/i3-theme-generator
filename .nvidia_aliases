@@ -1,0 +1,16 @@
+setopt no_share_history
+unsetopt share_history
+alias repos="cd ~/Documents/Repos"
+alias dmcore="cd ~/Documents/Repos/deepmap-core"
+alias dmbase="cd ~/Documents/Repos/deepmap-core/deepmap-base"
+alias vpnon='cd /home/zpsarakis/Documents/VPN/cato && ./cclient.sh start --reconn 2 --load >/dev/null&;cd -'
+alias vpnoff='cd /home/zpsarakis/Documents/VPN/cato && ./cclient.sh stop;cd -'
+alias vpnstat='cd /home/zpsarakis/Documents/VPN/cato && ./status.sh;cd -'
+
+#NGC
+#docker login nvcr.io
+#Username: $oauthtoken
+#API Key: bnFqMTc3bXBoYmFuYjczbHE2OHR2ZXEyNG46NTA4NjMwYTMtMmVmOS00NGJhLTg4N2UtOGYyYzMwYzJkMzk2
+
+#maglev
+#API Key: ASRjNmQwMjZlMy0wZmQ0LTVhYzUtYTQzNC1hMDk3ZjQyM2Y5ZmRA54NNEc51nQIB8Pxh34SGoCSKhJNfFmVh0nBpzNyVKOM1WD7Aa+aiv9hQBm8fJ/j7Coj2qotShHqzvZb5SSXdBQ==

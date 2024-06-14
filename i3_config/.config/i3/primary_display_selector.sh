@@ -1,0 +1,1 @@
+/home/zpsarakis/Documents/Repos/i3-theme-generator/endeavor_theme_setup/.config/i3/primary_display_selector.sh
